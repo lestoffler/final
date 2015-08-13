@@ -1,0 +1,28 @@
+extends layout
+
+block content
+	h1 Hello Name #{user.username}
+		for treatment in treatments
+			h2 #{treatment.name}
+			h2 #{treatment.category}
+			h2 #{treatment.type}
+			h2 #{treatment.materials}
+			h2 #{treatment.description}
+			button(name="plusone") I like it
+			button(name="minusone") I hate it
+			hr
+		form#searchtreatment(method="get", action="/home")
+			select(name="type", placeholder="Type")
+				option(value="") None
+				option(value="acupuncture") Acupuncture
+				option(value="herbology") Herbology
+				option(value="diet") Diet
+			select(name="category", placeholder="Category")
+				option(value="") None
+				option(value="cancer") Cancer
+				option(value="arthritis") Arthritis
+				option(value="depression") Depression 
+			button(name="submit" ) Find
+	a(href="/addtreatment") Add a treatment
+
+	script(src="/main.js")

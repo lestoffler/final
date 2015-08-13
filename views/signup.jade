@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	h1 Welcome to The Self-Wellness Network
+	hr
+	
+	form#add-user(method="post", action="/signup") 
+		input(name="username", placeholder="User Name")
+		input(name="email", placeholder="Email")
+		input(name="password", placeholder="Password")
+		input(type="submit")
+		
+
+	form#login(method="post", action="/login") 
+		input(name="username", placeholder="User Name" value="asdf")
+		input(name="email", placeholder="Email" value="asdf")
+		input(name="password", placeholder="Password" value="asdf")
+		input(type="submit")

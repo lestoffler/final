@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		title True Empowered Self Wellness
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+
+
+	body
+		nav(class="navbar navbar-default navbar-fixed-top" role="banner")
+			div(class="container")
+				div(class="navbar-header")
+					button(class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse")
+						span(class="sr-only") Toggle navigation
+						span(class="icon-bar")
+						span(class="icon-bar")
+						span(class="icon-bar")
+					a(href="/home" class="navbar-brand") Home
+				nav(class="collapse navbar-collapse" role="navigation")
+					ul(class="nav navbar-nav")
+						li
+							a(href="#sec") About
+						li
+							a(href="#sec") FAQs
+						li
+							a(href="#sec") Resources
+						li
+							a(href="#sec") Contact Me
+		div(style="height:50px;")
+		block content
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js")
+		

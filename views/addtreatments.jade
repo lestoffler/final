@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	h1 Welcome to The Self-Wellness Network
+	hr
+	
+	form#add-treatment(method="post", action="/posttreatment")
+		select(name="type", placeholder="Type")
+			option(value="acupuncture") Acupuncture
+			option(value="herbology") Herbology
+			option(value="diet") Diet
+		select(name="category", placeholder="Category")
+			option(value="cancer") Cancer
+			option(value="arthritis") Arthritis
+			option(value="depression") Depression 
+		input(name="name", placeholder="Name")
+		input(name="materials", placeholder="Materials Needed")
+		input(name="description", placeholder="Description")
+		input(type="submit")

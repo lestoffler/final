@@ -13,7 +13,7 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy; 
 var User = require('./models/user.js')
 
-mongoose.connect('mongodb://localhost/holistichealth');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/holistichealth');
 
 var app = express();
 app.set('view engine', 'jade');
@@ -96,7 +96,7 @@ app.post('/rating/minusone', indexController.minusone);
 app.get('/about', indexController.about);
 app.get('/contactinfo', indexController.contactinfo);
 
-
-var server = app.listen(6850, function() {
+var port = process.env.PORT || 6850;
+var server = app.listen(port, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });

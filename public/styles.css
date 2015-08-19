@@ -141,7 +141,6 @@ div.col-md-8.intro {
 }
 
 h1#name-intro {
-/*  display: inline;*/
   padding-left: 20px;
   padding-right: 20px;
   color: white;
@@ -318,22 +317,23 @@ select.type {
 
 select.category {
   font-size: 20px;
+  height: 20px;
 }
 
 input.name-two {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 textarea.materials-two {
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 14px;
   height: auto;
   width: 50%;
 }
 
 textarea.description-two {
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 14px;
   height: auto;
   width: 50%;
 }

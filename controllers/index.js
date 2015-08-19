@@ -45,6 +45,7 @@ var indexController = {
 			if (error) {
 				console.log(error)
 			}
+			console.log('doc length', documents.length)
 			var newDocs = documents.map(function(doc){
 				var totalScore = 0
 				for (var key in doc.rating) {
@@ -55,7 +56,7 @@ var indexController = {
 				console.log('doc? ', doc)
 				return doc 
 			})
-			// console.log(newDocs)
+			console.log("newDocs ", newDocs)
 			res.render('treatment', {
 				user       : req.user,
 				treatments : newDocs

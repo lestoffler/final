@@ -10,8 +10,9 @@ $(document).ready(function(){
 			method: 'POST', 
 			data: {name : $(this).attr('data-which')},
 			success : function(returnData){
+				console.log(returnData)
 				console.log($this)
-				$this.closest('.treatment').find('.total-score').text(returnData.totalScore)
+				$this.closest('.treatment').find('.total-score').text("Total Usefulness Score: " + returnData.totalScore)
 			}
 			
 		});
@@ -24,11 +25,10 @@ $(document).ready(function(){
 			method: 'POST', 
 			data: {name : $(this).attr('data-which')},
 			success : function(returnData){
-				$this.closest('.treatment').find('.total-score').text(returnData.totalScore)
+				$this.closest('.treatment').find('.total-score').text("Total Usefulness Score: " + returnData.totalScore)
 			}
 			
-		});
-	
-	})		
-	
+		});		
+
+	})
 });

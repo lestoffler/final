@@ -6,7 +6,7 @@ block content
 			div.row
 				div.col-md-2
 					div.well
-						img(src="http://www.armonikizoi.com/wp-content/uploads/13643141-health-nature-logo.jpg" class="img-responsive logo")			
+						img(src="http://www.armonikizoi.com/wp-content/uploads/13643141-health-nature-logo.jpg" class="img-responsive logo") 
 				div.col-md-10
 					h1.welcome Welcome to The Self-Wellness Network
 					ul
@@ -22,7 +22,7 @@ block content
 	hr
 	div.intro
 		h2#intro-paragraph-title Holistic Health and Self-Wellness
-		p.intro-paragraph Welcome to The Self-Wellness Network! Join other like-minded individuals in educating, empowering and healing one another through sharing holistic health treatments. Please sign up below by entering a username of your choice, a valid email address and your own unique password. After completing this step, on subsequent visits to the network, use the log-in fields to access your profile. This site offers users a forum to share and educate eachother on Holistic Treatment for common health issues. click on a health issue to the left to see what holistic treatments others have shared, try them yourself and then rate them on availability, ease of use and effectiveness. Also, feel free to share all of your own holistic treatments that you love with others. It is through taking charge of our own health and wellness and sharing our knowledge with others that we can truly heal and empower each other to be in charge of our own health!
+		p.intro-paragraph Welcome to The Self-Wellness Network! Join other like-minded individuals in educating, empowering and healing one another through shared Holistic Health Treatments. This site offers users a forum to share and educate one another on Holistic Treatments for common health issues. Please sign up below by entering a username of your choice, a valid email address and your own unique password. After completing this step, on subsequent visits to the network, use the log-in fields to access your profile. It is through taking charge of our own health and wellness, and sharing our knowledge with others, that we can empower each other to take charge of our own wellness!
 
 	hr
 	h2.sign-up-title Sign-Up Here 
@@ -30,16 +30,15 @@ block content
 	form#add-user(method="post", action="/signup") 
 		input(name="username", placeholder="User Name")
 		input(name="email", placeholder="Email")
-		input(name="password", placeholder="Create Password")
+		input(name="password", type="password" placeholder="Create Password")
 		input(type="submit", placeholder="Submit", class="submit")
 		
-	h2.log-in-title Log-In Here 
+	h2.log-in-title Login Here 
 	h4 Please complete the fields below to login to your profile after you have signed up.
 	form#login(method="post", action="/login") 
-		input(name="username", placeholder="User Name" value="asdf")
-		input(name="email", placeholder="Email" value="asdf")
-		input(name="password", placeholder="Password" value="asdf")
+		input(name="username", placeholder="User Name")
+		input(name="email", placeholder="Email")
+		input(name="password", type="password" placeholder="Password")
 		input(type="submit", placeholder="Submit", class="submit")
 
 
-			

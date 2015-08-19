@@ -45,11 +45,29 @@ var indexController = {
 			if (error) {
 				console.log(error)
 			}
+			var newDocs = documents.map(function(doc){
+				var totalScore = 0
+				for (var key in doc.rating) {
+					totalScore += doc.rating[key]
+				}
+				console.log('total? ', totalScore)
+				doc.totalScore = totalScore
+				console.log('doc? ', doc)
+				return doc 
+			})
+			// console.log(newDocs)
 			res.render('treatment', {
 				user       : req.user,
-				treatments : documents
+				treatments : newDocs
 			});
 		})
+	},
+	about: function(req, res) {
+		res.render('about.jade')
+	},
+
+	contactinfo: function(req, res) {
+		res.render('contactinfo.jade')
 	},
 
 	addtreatment: function(req, res) {
@@ -64,7 +82,6 @@ var indexController = {
 			name         :  req.body.name,
 			materials    :  req.body.materials,
 			description  :  req.body.description,
-			rating       :  []
 		})
 		newTreatment.save(function(error) {
 			if (error) {
@@ -72,6 +89,46 @@ var indexController = {
 			}
 			res.redirect('/addtreatment')
 		})
+	},
+	plusone: function(req, res) {
+		Treatment.find({name : req.body.name}, function(error, documents){
+			if (error) {
+				console.log(error)
+			}
+			documents[0].rating[req.user.email] = 1
+			documents[0].markModified('rating')
+			documents[0].save(function(error){
+				if (error) {
+					console.log(error)
+				}
+				var totalScore = 0
+				for (var key in documents[0].rating) {
+					totalScore += documents[0].rating[key]
+				}
+				res.send({totalScore: totalScore})
+			});
+
+		});
+	},
+	minusone: function(req, res) {
+		Treatment.find({name : req.body.name}, function(error, documents){
+			if (error) {
+				console.log(error)
+			}
+			documents[0].rating[req.user.email] = -1
+			documents[0].markModified('rating')
+			documents[0].save(function(error){
+				if (error) {
+					console.log(error)
+				}
+				var totalScore = 0
+				for (var key in documents[0].rating) {
+					totalScore += documents[0].rating[key]
+				}
+				res.send({totalScore: totalScore})
+			});
+
+		});
 	}
 };
 

@@ -1,11 +1,16 @@
 doctype html
-html(lang='en')
+html(lang='en' class='no-js')
 	head
+		meta(http-equiv="content-type" content="text/html; charset=UTF-8")
 		meta(charset="utf-8")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		title True Empowered Self Wellness
+		title The Self Wellness Network
+		meta(name="generator" content="Bootply")
 		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+		link(rel="stylesheet" href="/styles.css")
+		//- link(rel="stylesheet" href="/main.css")
+		//- link(rel="stylesheet" href="css/bootstrap.min.css")
 
 
 	body
@@ -21,14 +26,12 @@ html(lang='en')
 				nav(class="collapse navbar-collapse" role="navigation")
 					ul(class="nav navbar-nav")
 						li
-							a(href="#sec") About
+							a(href="/about") About
 						li
-							a(href="#sec") FAQs
+							a(href="/contactinfo") Contact Me
 						li
-							a(href="#sec") Resources
-						li
-							a(href="#sec") Contact Me
+							a(href="/") Log-In
 		div(style="height:50px;")
 		block content
 		script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js")
-		
+		block scripts

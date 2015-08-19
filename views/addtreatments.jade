@@ -1,19 +1,51 @@
 extends layout
 
 block content
-	h1 Welcome to The Self-Wellness Network
+	img#add-treatment-image(src="http://2.bp.blogspot.com/_cWcuJM9QIG4/S7hSrBEDK8I/AAAAAAAAAZA/OHtyz3cUJ2o/s1600/Natural+wallpapers%252Bmobile+wallpapers%252Bpc+wallpapers%252Bwallpapers%252Bmobile+themes%252Bpc+themes+1ro.jpg" class="img-responsive" width="1000px" height="200px")
+	h1#add-treatment-title 	Add Your Holistic Treatment To The Self-Wellness Network
+	h3#add-treatment-subtitle Please be as specific as possible.
 	hr
 	
+	p.treatment-type-two Treatment Type 
+	p.health-category-two Health Category
 	form#add-treatment(method="post", action="/posttreatment")
-		select(name="type", placeholder="Type")
+		select.type(name="type", placeholder="Type")
 			option(value="acupuncture") Acupuncture
-			option(value="herbology") Herbology
+			option(value="aromatherapy") Aromatherapy
+			option(value="behavioral health") Behavioral Health 
+			option(value="chinese medicine") Chinese Medicine
+			option(value="chiropractic") Chiropractic
 			option(value="diet") Diet
-		select(name="category", placeholder="Category")
-			option(value="cancer") Cancer
+			option(value="energy-based theories") Energy-Based Theories  
+			option(value="exercise") Exercise 
+			option(value="herbology") Herbology
+			option(value="homeopathy") Homeopathy
+			option(value="massage therapy") Massage Therapy 
+			option(value="naturopathy") Naturopathy 
+			option(value="psychotherapy") Psychotherapy
+			option(value="stress therapy") Stress Therapy 
+		select.category(name="category", placeholder="Category")
+			option(value="adhd/add") ADHD/ADD
+			option(value="anxiety") Anxiety
 			option(value="arthritis") Arthritis
-			option(value="depression") Depression 
-		input(name="name", placeholder="Name")
-		input(name="materials", placeholder="Materials Needed")
-		input(name="description", placeholder="Description")
-		input(type="submit")
+			option(value="autoimmune disorder") Autoimmune Disorder 
+			option(value="bipolar disorder") Bipolar Disorder 
+			option(value="cancer") Cancer 
+			option(value="cardiac") Cardiac 
+			option(value="depression") Depression
+			option(value="digestion") Digestion 
+			option(value="diabetes") Diabetes
+			option(value="hormones") Hormones
+			option(value="pain") Pain
+			option(value="ptsd/trauma") PTSD/Trauma
+			option(value="seizures") Seizures
+			option(value="skin/hair/beauty") Skin/Hair/Beauty
+			option(value="substance abuse") Substance Abuse
+		br  
+		input.name-two(name="name", placeholder="Name of Treatment")
+		br
+		textarea.materials-two(name="materials", placeholder="Materials Needed")
+		br 
+		textarea.description-two(name="description", placeholder="Description")
+		br 
+		input#add-treatment-button(type="submit" value="Add Treatment")

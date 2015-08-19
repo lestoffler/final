@@ -8,7 +8,8 @@ var treatmentSchema = mongoose.Schema ({
 	name         : {type : String},
 	materials    : {type : String},
 	description  : {type : String},
-	rating       : {type : Object}
+	rating       : {type : Object, default : {placeholder : 0}},
+	totalScore   : {type : Number, default : 0}
 
 });
 

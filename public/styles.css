@@ -1,0 +1,410 @@
+/*
+A Bootstrap 3.1 affix sidebar template
+from http://bootply.com
+
+This CSS code should follow the 'bootstrap.css'
+in your HTML file.
+
+license: MIT
+author: bootply.com
+*/
+
+/* universal */
+body {
+ padding-top: 50px;
+ background-color: #c9e6b8;
+ color: black;
+ font-family: Helvetica, Arial, sans-serif;
+ margin: 20px;
+}
+
+h1 h2 h3 h4 {
+  font-weight: bold;
+}
+
+input {
+  font-size: 20px;
+}
+
+input.submit {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+img.img-responsive {
+  display: inline;
+}
+
+.navbar-default {
+    background-color: #58a828;
+    border-bottom: 5px solid #e7e7e7;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+/* Index Sign-up Log-in page*/
+#masthead { 
+ min-height:200px;
+}
+
+#masthead h1 {
+ font-size: 28px;
+ line-height: 1;
+ padding-top:20px;
+ padding-left: 40px;
+}
+
+#masthead ul {
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+#masthead li {
+  margin: auto;
+  display: inline;
+  font-size: 25px 
+}
+
+.navbar-bright {
+ background-color: ;
+ color:#fff;
+}
+
+.affix-top,.affix{
+ position: static;
+}
+
+div.col-md-10 {
+  border: 5px solid white;
+}
+
+
+img.img-responsive.login-image {
+  width: 1130px;
+  height: 150px;
+}
+
+.container-jumbotron {
+  padding: 10px;
+}
+
+.jumbotron {
+  padding: 10px;
+}
+
+.jumbotron.text-center {
+  margin: auto;
+}
+
+div.intro {
+  background-color: #58a828;
+}
+
+h2#intro-paragraph-title {
+  color: white;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+p.intro-paragraph {
+  color: white;
+  font-size: 17px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+form#add-user {
+  padding: 20px;
+}
+
+form#login {
+  padding: 20px; 
+}
+
+
+/*treatment.jade*/
+div.welcome-message {
+  background-color: #58a828;
+  height: auto;
+}
+
+div.col-md-8.intro {
+  background-color: #58a828;
+  border: 5px solid white;
+}
+
+h1#name-intro {
+/*  display: inline;*/
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  float: left;
+  font-size: 60px;
+}
+
+h4#homepage {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+div.col-md-4 {
+
+}
+
+img.hello-img {
+  display: block;
+  margin: auto;
+  height: 200px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 5px solid white;
+}
+
+div.search.col-md-6 {
+  border: 2px solid white;
+
+}
+
+h3.search-title {
+  font-weight: bold;
+}
+
+p.treatment-type {
+  display: inline-block;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+
+p.health-category {
+  display: inline;
+  margin-left: 90px;
+}
+
+form#searchtreatment {
+  font-size: 20px;
+  margin-left: 60px;
+}
+
+button.search {
+  margin-left: 10px;
+  margin-bottom: 1px;
+  border-radius: 5px;
+  padding-bottom: 3px;
+}
+
+div.addto.col-md-6 {
+  background-color: #58a828;
+  border: 2px solid white;
+}
+
+h3.addtreatment {
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+a.add-treatment {
+  font-size: 30px;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+
+div#treatment {
+  margin-left: 20px;
+}
+
+div.col-md-2.treatment-image {
+  margin-top: 10px;
+}
+
+img.static-image {
+/*  display: inline;
+*/}
+
+div.col-md-10.treatment-profile {
+  margin-top: 10px;
+}
+
+h2.treatment-name {
+  font-size: 45px;
+}
+
+h3.treatment-category {
+
+}
+
+h3.treatment-type {
+
+}
+
+h3.treatment-materials {
+
+}
+
+h3.treatment-description {
+  padding-bottom: 20px;
+
+}
+
+button.plusone {
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+button.minusone {
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+h3.total-score {
+  display: inline;
+  padding-left: 230px;
+  font-weight: bold;
+}
+
+/* addtreatment.jade*/
+img#add-treatment-image {
+  display: block;
+  margin: auto;
+  border: 5px solid white;
+  width: 100%;
+  height: 300px;
+
+}
+
+
+h1#add-treatment-title { 
+  font-weight: bolder;
+  padding-top: 50px;
+  display: block;
+  margin: auto;
+
+}
+
+h3#add-treatment-subtitle {
+
+}
+
+p.treatment-type-two {
+  display: inline-block;
+/*  margin-left: 60px;
+*/  margin-top: 10px;
+}
+
+p.health-category-two {
+  display: inline;
+  margin-left: 90px;
+}
+
+select.type {
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  height: 20px;
+}
+
+select.category {
+  font-size: 20px;
+}
+
+input.name-two {
+  margin-bottom: 20px;
+}
+
+textarea.materials-two {
+  margin-bottom: 20px;
+  font-size: 20px;
+  height: auto;
+  width: 50%;
+}
+
+textarea.description-two {
+  margin-bottom: 20px;
+  font-size: 20px;
+  height: auto;
+  width: 50%;
+}
+
+input#add-treatment-button {
+  border-radius: 5px;
+}
+
+/* about.jade */
+
+h1.about {
+  font-weight: bold;
+}
+
+h2.about-two {
+
+}
+
+h3.mission-statement {
+  font-weight: bolder;
+}
+
+h4.mission {
+
+}
+
+h3.types {
+  font-weight: bold;
+}
+
+div.types-of-treatments h4 {
+  font-weight: bold;
+}
+
+h3.categories {
+  font-weight: bold;
+}
+div.categories-of-health h4{
+  font-weight: bold;
+}
+
+h1.contactinfo-title {
+  font-weight: bold;
+}
+
+
+@media screen and (min-width: 768px) {
+  #masthead h1 {
+    font-size: 45px;
+  }
+
+/*@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: static;
+  	margin-top:30px;
+  	width:228px;
+  }
+  
+  #sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+  }
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#sidebar li.active {
+  border:0 #eee solid;
+  border-right-width:5px;
+}

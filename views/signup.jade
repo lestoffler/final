@@ -1,18 +1,45 @@
 extends layout
 
 block content
-	h1 Welcome to The Self-Wellness Network
+	div#masthead 
+		div.container
+			div.row
+				div.col-md-2
+					div.well
+						img(src="http://www.armonikizoi.com/wp-content/uploads/13643141-health-nature-logo.jpg" class="img-responsive logo")			
+				div.col-md-10
+					h1.welcome Welcome to The Self-Wellness Network
+					ul
+						li.educate Educate.   
+						li.empower Empower.    
+						li.heal Heal.   
+						li.balance Balance.   
+						li.grow Grow.   
+
+		div(class="container-jumbotron")
+			div(class="jumbotron text-center")
+				img(src="http://www.alkalima.com/images/08-02/nature.jpg"  class="img-responsive login-image")
 	hr
-	
+	div.intro
+		h2#intro-paragraph-title Holistic Health and Self-Wellness
+		p.intro-paragraph Welcome to The Self-Wellness Network! Join other like-minded individuals in educating, empowering and healing one another through sharing holistic health treatments. Please sign up below by entering a username of your choice, a valid email address and your own unique password. After completing this step, on subsequent visits to the network, use the log-in fields to access your profile. This site offers users a forum to share and educate eachother on Holistic Treatment for common health issues. click on a health issue to the left to see what holistic treatments others have shared, try them yourself and then rate them on availability, ease of use and effectiveness. Also, feel free to share all of your own holistic treatments that you love with others. It is through taking charge of our own health and wellness and sharing our knowledge with others that we can truly heal and empower each other to be in charge of our own health!
+
+	hr
+	h2.sign-up-title Sign-Up Here 
+	h4 Please complete the fields below to enjoy the many benefits of The Self-Wellness Network.
 	form#add-user(method="post", action="/signup") 
 		input(name="username", placeholder="User Name")
 		input(name="email", placeholder="Email")
-		input(name="password", placeholder="Password")
-		input(type="submit")
+		input(name="password", placeholder="Create Password")
+		input(type="submit", placeholder="Submit", class="submit")
 		
-
+	h2.log-in-title Log-In Here 
+	h4 Please complete the fields below to login to your profile after you have signed up.
 	form#login(method="post", action="/login") 
 		input(name="username", placeholder="User Name" value="asdf")
 		input(name="email", placeholder="Email" value="asdf")
 		input(name="password", placeholder="Password" value="asdf")
-		input(type="submit")
+		input(type="submit", placeholder="Submit", class="submit")
+
+
+			

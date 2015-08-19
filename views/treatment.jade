@@ -1,28 +1,86 @@
 extends layout
 
 block content
-	h1 Hello Name #{user.username}
-		for treatment in treatments
-			h2 #{treatment.name}
-			h2 #{treatment.category}
-			h2 #{treatment.type}
-			h2 #{treatment.materials}
-			h2 #{treatment.description}
-			button(name="plusone") I like it
-			button(name="minusone") I hate it
-			hr
+	div#masthead 
+		div.container
+			div.row
+				div.col-md-2
+					div.well
+						img(src="http://www.armonikizoi.com/wp-content/uploads/13643141-health-nature-logo.jpg" class="img-responsive logo")			
+				div.col-md-10
+					h1 The Self-Wellness Network Profile Page
+					ul
+						li.educate Educate. 
+						li.empower Empower. 
+						li.heal Heal.   
+						li.balance Balance.   
+						li.grow Grow.   
+	hr
+	div.welcome-message
+		div.col-md-8.intro
+			h1#name-intro Hello #{user.username}!
+			h4#homepage Welcome to your home page! This is where you can search for holistic treatments using the type of treatment and/or the category of health. You may also add your own holistic treatments to the network.
+		div.col-md-4
+			img(src="http://media-cache-ak0.pinimg.com/736x/9b/b1/75/9bb175cfb853dc25759b08c952af34c6.jpg" class="img-responsive hello-img" height="100px" width="250px")
+	hr
+	div.search.col-md-6
+		h3.search-title Search the Network for Holistic Treatments by Treatment Type or Health Category.
+		p.treatment-type Treatment Type 
+		p.health-category Health Category 
 		form#searchtreatment(method="get", action="/home")
-			select(name="type", placeholder="Type")
+			select(name="type", placeholder="Type" class="type")
 				option(value="") None
 				option(value="acupuncture") Acupuncture
-				option(value="herbology") Herbology
+				option(value="aromatherapy") Aromatherapy
+				option(value="behavioral health") Behavioral Health
+				option(value="chinese medicine") Chinese Medicine
+				option(value="chiropractic") Chiropractic
 				option(value="diet") Diet
-			select(name="category", placeholder="Category")
+				option(value="energy-based therapies") Energy-Based Therapy
+				option(value="exercise") Exercise
+				option(value="herbology") Herbology
+				option(value="homeopathy") Homeopathy
+				option(value="massage therapy") Massage Therapy
+				option(value="naturopathy") Naturopathy
+				option(value="psychotherapy") Psychotherapy
+				option(value="stress therapy") Stress Therapy
+			select(name="category", placeholder="Category", class="category")
 				option(value="") None
-				option(value="cancer") Cancer
+				option(value="adhd/add") ADHD/ADD
+				option(value="anxiety") Anxiety
 				option(value="arthritis") Arthritis
-				option(value="depression") Depression 
-			button(name="submit" ) Find
-	a(href="/addtreatment") Add a treatment
+				option(value="autoimmune disorder") Autoimmune Disorder
+				option(value="bipolar disorder") Bipolar Disorder
+				option(value="cancer") Cancer
+				option(value="cardiac") Cardiac
+				option(value="depression") Depression
+				option(value="digestion") Digestion
+				option(value="diabetes") Diabetes 
+				option(value="hormones") Hormones 
+				option(value="pain") Pain
+				option(value="ptsd") PTSD 
+				option(value="seizures") Seizures 
+				option(value="skin/hair/beauty") Skin/Hair/Beauty
+				option(value="substance abuse") Substance Abuse  
+			button(name="submit" class="search") Find
 
+	div.addto.col-md-6
+		h3.addtreatment Please add Holistic Treatments that you would like to share with the network and that have worked for you!
+		a(href="/addtreatment" class="add-treatment") Click Here To Add Holistic Treatments
+	for treatment in treatments
+		div(id="treatment")
+			div.col-md-2.treatment-image
+				img(class="static-image" src="http://www.earnestholistichealth.com/wp-content/uploads/2013/07/zen-stress-management.jpg" width="175px" height="290px")
+			div.col-md-10.treatment-profile
+				h2.treatment-name Name: #{treatment.name}
+				h3.treatment-category Category: #{treatment.category}
+				h3.treatment-type Type: #{treatment.type}
+				h3.treatment-materials Materials Needed: #{treatment.materials}
+				h3.treatment-description Description of Treatment: #{treatment.description}
+				button(name="plusone" class="plusone" data-which="#{treatment.name}") This Treatment Is Useful
+				button(name="minusone" class="minusone" data-which="#{treatment.name}") This Treatment Is Not Useful
+				h3.total-score Total Usefulness Score: #{treatment.totalScore}
+		
+
+block scripts
 	script(src="/main.js")

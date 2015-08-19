@@ -91,6 +91,11 @@ app.get('/home', ensureAuthenticated, indexController.home);
 app.post('/login', passport.authenticate('local', {successRedirect : '/home', failureRedirect : '/'}));
 app.get('/addtreatment', ensureAuthenticated, indexController.addtreatment);
 app.post('/posttreatment', indexController.posttreatment);
+app.post('/rating/plusone', indexController.plusone);
+app.post('/rating/minusone', indexController.minusone);
+app.get('/about', indexController.about);
+app.get('/contactinfo', indexController.contactinfo);
+
 
 var server = app.listen(6850, function() {
 	console.log('Express server listening on port ' + server.address().port);
